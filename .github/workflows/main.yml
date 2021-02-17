@@ -13,3 +13,4 @@ jobs:
       name: Run Swift Action
       with:
         swift-action: '--version'
+        working-directory: '.'

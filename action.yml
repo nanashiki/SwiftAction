@@ -9,8 +9,13 @@ inputs:
     description: 'Swift action to run'
     required: true
     default: 'build'
+  working-directory:
+    description: 'Working directory'
+    required: true
+    default: '.'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.swift-action }}
+    - ${{ inputs.working-directory }}
